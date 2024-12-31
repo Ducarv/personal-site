@@ -6,10 +6,6 @@
   html {
     font-family: 'Poppins', sans-serif;
   }
-  
-  body {
-    @apply bg-gray-900 text-white;
-  }
 }
 
 @keyframes float {

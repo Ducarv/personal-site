@@ -26,10 +26,6 @@
   animation: blink 1s step-end infinite;
 }
 
-body {
-  @apply bg-gray-900;
-}
-
 /* Glass Morphism */
 .glass {
   @apply bg-white/10 backdrop-blur-lg;
