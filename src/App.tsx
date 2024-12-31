@@ -8,11 +8,11 @@ import './index.css';
 const App = () => {
     return (
         <div className="bg-[#343a40] text-gray-900 min-h-screen flex items-center justify-center">
-            <div className="w-[600px] max-w-full mx-auto px-6">
+            <div className="w-[700px] max-w-full mx-auto px-6">
                 <Header />
                 <Hero/>
-                <Projects />
                 <Experience />
+                <Projects />
                 <Tools />
             </div>
         </div>
