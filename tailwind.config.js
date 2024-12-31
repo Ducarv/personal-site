@@ -1,13 +1,13 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+import daisyui from 'daisyui';
 
-module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'], // Paths to your files,
+export default {
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   daisyui: {
     themes: [
       {
         portifolio: {
           primary: '#ffc300',
-          secondary: '#ffffff',
+          secondary: '#ededed',
           accent: '#ffd60a',
           neutral: '#001d3d',
           neutralTwo: '#003566',
@@ -16,5 +16,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [require('daisyui')],
+  plugins: [daisyui],
 };
