@@ -1,5 +1,5 @@
-const Projects = () => {
-    const projects = [
+const Services = () => {
+    const services = [
         "SaaS Framer Template",
         "Website Builder",
         "AI Assistant",
@@ -8,14 +8,14 @@ const Projects = () => {
 
     return (
         <section className="p-6 text-secondary bg-[#212529] mb-6 rounded-lg shadow-lg">
-            <h2 className="text-3xl font-semibold mb-4 text-primary">Projects</h2>
+            <h2 className="text-3xl font-semibold mb-4 text-primary">Services</h2>
             <ul className="list-disc list-inside text-lg">
-                {projects.map((project, index) => (
-                    <li key={index} className="mb-2">{project}</li>
+                {services.map((service, index) => (
+                    <li key={index} className="mb-2">{service}</li>
                 ))}
             </ul>
         </section>
     );
 };
 
-export default Projects;
+export default Services;

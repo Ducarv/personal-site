@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
     { href: "/", icon: <FaHome />, label: "Home" },
-    { href: "/projects", icon: <FaFolder />, label: "Projects" },
     { href: "/experience", icon: <FaCog />, label: "Experience" },
+    { href: "/services", icon: <FaFolder />, label: "Services" },
     { href: "/tools", icon: <FaTools />, label: "Tools" },
     { href: "/contact", icon: <FaEnvelope />, label: "Contact" },
 ];
