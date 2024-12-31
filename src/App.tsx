@@ -1,11 +1,7 @@
-import { LanguageProvider } from './context/LanguageContext';
+import { Home } from "./components/Home";
 
 export default function App() {
   return (
-    <LanguageProvider>
-      <div className="text-black min-h-screen">
-
-      </div>
-    </LanguageProvider>
+    <Home/>
   );
 }
