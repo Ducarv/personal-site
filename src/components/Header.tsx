@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <header className="p-4 mb-6 rounded-lg bg-neutral text-neutral-content shadow-md w-full z-50 relative">
+    <header className="p-4 mb-6 rounded-lg rounded-t-none bg-neutral text-neutral-content shadow-md w-full z-50 relative">
       <nav>
         <ul className="flex justify-center space-x-8">
           {navItems.map((item) => (

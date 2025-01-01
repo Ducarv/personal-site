@@ -4,6 +4,7 @@ import Hero from "../components/Hero"
 import Services from "../components/Services"
 import Tools from "../components/Tools"
 import ContactBtn from '../components/contact/ContactBtn';
+import Footer from '../components/Footer';
 
 export const Home = () => {
     return(
@@ -14,6 +15,7 @@ export const Home = () => {
             <Services />
             <Tools />
             <ContactBtn />
-    </div>
+            <Footer/>
+        </div>
     )
 }

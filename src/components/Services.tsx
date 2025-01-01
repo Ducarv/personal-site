@@ -5,7 +5,7 @@ import {
   FaRobot,
   FaTasks,
   FaHeadset,
-} from "react-icons/fa"; // Importando mais ícones
+} from "react-icons/fa";
 
 const services = [
   {
@@ -53,25 +53,27 @@ const services = [
 ];
 
 const Services = () => {
-    return (
-      <section className="p-6 text-secondary bg-[#212529] mb-6 rounded-lg shadow-lg">
-        <h2 className="text-3xl font-semibold mb-4 text-primary">Services</h2>
-        <ul className="grid grid-cols-1 gap-4"> {/* One column, gap for spacing */}
-          {services.map((service, index) => (
-            <li key={index} className="card flex flex-col items-center rounded-lg overflow-hidden shadow-md bg-[#343a40] hover:bg-[#3c4349] transition duration-200 ease-in-out">
-              <div className="flex-grow p-4"> {/* Increased space for content */}
-                {service.icon} {/* Display the icon */}
-                <div className="text-left"> {/* Align content to the left */}
-                  <h3 className="text-lg font-semibold mb-2 text-secondary">{service.title}</h3>
-                  <p className="text-sm text-gray-400 mb-4">{service.description}</p>
-                  <span className="text-xs mb-2 text-gray-400">Starting at ${service.price},00</span>
-                </div>
+  const displayedServices = services.slice(0, 2); // Show first two services
+
+  return (
+    <section className="p-6 text-secondary bg-[#212529] mb-6 rounded-lg shadow-lg">
+      <h2 className="text-3xl font-semibold mb-4 text-primary">Services</h2>
+      <ul className="grid grid-cols-1 gap-4"> {/* One column, gap for spacing */}
+        {displayedServices.map((service, index) => (
+          <li key={index} className="card flex flex-col items-center rounded-lg overflow-hidden shadow-md bg-[#343a40] hover:bg-[#3c4349] transition duration-200 ease-in-out">
+            <div className="flex-grow p-4"> {/* Increased space for content */}
+              {service.icon} {/* Display the icon */}
+              <div className="text-left"> {/* Align content to the left */}
+                <h3 className="text-lg font-semibold mb-2 text-secondary">{service.title}</h3>
+                <p className="text-sm text-gray-400 mb-4">{service.description}</p>
+                <span className="text-xs mb-2 text-gray-400">Starting at ${service.price},00</span>
               </div>
-            </li>
-          ))}
-        </ul>
-      </section>
-    );
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
 };
 
 export default Services;
