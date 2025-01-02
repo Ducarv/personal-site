@@ -80,6 +80,7 @@ const ContactForm = () => {
             placeholder="Your name"
             className={inputStyles}
             required
+            autoComplete="new-password"
           />
         </div>
 
@@ -92,6 +93,7 @@ const ContactForm = () => {
             placeholder="Your email"
             className={inputStyles}
             required
+            autoComplete="off"
           />
         </div>
 
@@ -104,6 +106,7 @@ const ContactForm = () => {
             rows={4}
             className={`${inputStyles} resize-none`}
             required
+            autoComplete="off"
           />
         </div>
 
