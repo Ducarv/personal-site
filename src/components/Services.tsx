@@ -1,3 +1,4 @@
+import { Link, useLocation } from 'react-router-dom'
 import {
   FaCode,
   FaObjectGroup,
@@ -52,12 +53,18 @@ const services = [
   },
 ];
 
-const Services = () => {
-  const displayedServices = services.slice(0, 2); // Show first two services
+interface ServicesProps {
+  showTitle?: boolean;
+  qty: number;
+}
+
+const Services: React.FC<ServicesProps> = ({ showTitle = true, qty }: ServicesProps) => {
+  const displayedServices = services.slice(0, qty);
+  const location = useLocation();
 
   return (
     <section className="p-6 text-secondary bg-[#212529] mb-6 rounded-lg shadow-lg">
-      <h2 className="text-3xl font-semibold mb-4 text-primary">Services</h2>
+      {showTitle && <h2 className="text-3xl font-semibold mb-4 text-primary">Services</h2>}
       <ul className="grid grid-cols-1 gap-4"> {/* One column, gap for spacing */}
         {displayedServices.map((service, index) => (
           <li key={index} className="card flex flex-col items-center rounded-lg overflow-hidden shadow-md bg-[#343a40] hover:bg-[#3c4349] transition duration-200 ease-in-out">
@@ -72,6 +79,14 @@ const Services = () => {
           </li>
         ))}
       </ul>
+      {location.pathname !== '/services' && (
+        <Link
+          to="/services"
+          className="text-primary hover:underline text-sm mt-4 inline-block"
+        >
+          See more services
+        </Link>
+      )}
     </section>
   );
 };

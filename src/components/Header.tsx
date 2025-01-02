@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaHome, FaFolder, FaCog, FaTools, FaEnvelope } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const navItems = [
     { href: "/", icon: <FaHome />, label: "Home" },
@@ -32,14 +33,14 @@ const Header = () => {
         <ul className="flex justify-center space-x-8">
           {navItems.map((item) => (
             <li key={item.label} className="relative flex flex-col items-center">
-              <a
-                href={item.href}
+              <Link
+                to={item.href}
                 className="flex items-center text-lg transition duration-300 focus:outline-none"
                 onMouseEnter={() => handleMouseEnter(item.label)}
                 onMouseLeave={handleMouseLeave}
               >
                 <span className="p-2 text-2xl">{item.icon}</span>
-              </a>
+              </Link>
               <AnimatePresence>
                 {openDropdown === item.label && (
                   <motion.div

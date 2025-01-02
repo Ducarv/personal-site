@@ -1,4 +1,5 @@
 import { FaHome, FaCog, FaFolder, FaTools, FaEnvelope } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const navItems = [
@@ -17,7 +18,9 @@ const Footer = () => {
             <ul className="flex flex-col items-center justify-center sm:flex-row sm:space-x-4">
                 {navItems.map(item => (
                     <li className="m-2 font-light text-sm hover:text-primary transition duration-200 ease-in-out">
-                        {item.label}
+                        <Link to={item.href}>
+                            {item.label}
+                        </Link>
                     </li>
                 ))}
             </ul>

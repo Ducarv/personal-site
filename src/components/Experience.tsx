@@ -7,7 +7,11 @@ interface ExperienceItem {
     endDate: string;
 }
 
-const Experience: React.FC = () => {
+interface ExperienceProps {
+    showTitle?: boolean;
+}
+
+const Experience: React.FC<ExperienceProps> = ({ showTitle = true }: ExperienceProps) => {
     const experiences: ExperienceItem[] = [
         {
             company: "Compass.UOL",
@@ -19,7 +23,7 @@ const Experience: React.FC = () => {
 
     return (
         <section className="p-6 text-secondary bg-[#212529] mb-6 rounded-lg shadow-lg">
-            <h2 className="text-3xl font-semibold mb-4 text-primary">Experiences</h2>
+            {showTitle && <h2 className="text-3xl font-semibold mb-4 text-primary">Experiences</h2>}
             {experiences.map((experience, index) => (
                <div key={index} className="mb-6 p-2 px-4 last:mb-0 bg-[#343a40] rounded-lg hover:bg-[#3c4349] transition duration-200 ease-in-out">
                 <h3 className="text-xl font-semibold mb-2">{experience.company}</h3>

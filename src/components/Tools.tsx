@@ -2,7 +2,11 @@ import { FaNodeJs, FaReact, FaAws } from 'react-icons/fa';
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { SiNestjs, SiGooglecloud, SiMongodb, SiPostgresql } from "react-icons/si";
 
-const Tools = () => {
+interface ToolsProps {
+  showTitle?: boolean;
+}
+
+const Tools: React.FC<ToolsProps> = ({ showTitle = true }: ToolsProps) => {
   const tools = [
     { name: 'Node.js', icon: <FaNodeJs className="text-5xl text-[#343a40]" />, description: 'JavaScript runtime' },
     { name: 'NestJS', icon: <SiNestjs className="text-5xl text-[#343a40]" />, description: 'Node.js Framework' },
@@ -17,7 +21,7 @@ const Tools = () => {
 
   return (
     <section className="p-6 text-secondary bg-[#212529] mb-6 rounded-lg shadow-lg">
-      <h2 className="text-3xl font-semibold mb-4 text-primary">My Tools</h2>
+      {showTitle && <h2 className="text-3xl font-semibold mb-4 text-primary">My Tools</h2>}
       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {tools.map((tool, index) => (
           <li key={index} className="flex items-center mb-4 p-2 bg-[#343a40] rounded-lg hover:bg-[#3c4349] transition duration-200 ease-in-out">
