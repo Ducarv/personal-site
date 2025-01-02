@@ -4,6 +4,7 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import ServicesPage from "./pages/Services";
 import ToolsPage from "./pages/Tools";
+import ContactPage from "./pages/Contact";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="experience" element={<ExperiencesPage />} />
           <Route path="services" element={<ServicesPage />} />
           <Route path="tools" element={<ToolsPage />} />
+          <Route path="contact" element={<ContactPage/>}/>
         </Route>
       </Routes>
     </Router>
