@@ -21,7 +21,7 @@ const Tools: React.FC<ToolsProps> = ({ showTitle = true }: ToolsProps) => {
 
   return (
     <section className="p-6 text-secondary bg-[#212529] mb-6 rounded-lg shadow-lg">
-      {showTitle && <h2 className="text-3xl font-semibold mb-4 text-primary">My Tools</h2>}
+      {showTitle && <h2 className="text-3xl font-semibold mb-4 text-primary">Tools</h2>}
       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {tools.map((tool, index) => (
           <li key={index} className="flex items-center mb-4 p-2 bg-[#343a40] rounded-lg hover:bg-[#3c4349] transition duration-200 ease-in-out">
