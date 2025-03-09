@@ -1,25 +1,22 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ExperiencesPage } from "./pages/Experiences";
-import Layout from "./components/Layout";
-import Home from "./pages/Home";
-import ServicesPage from "./pages/Services";
-import ToolsPage from "./pages/Tools";
-import ContactPage from "./pages/Contact";
+import React from 'react';
+import { Bio } from './components/Bio';
+import { BlockExplorer } from './components/BlockExplorer';
+import { PricesDashboard } from './components/PricesDashboard';
+import { Resources } from './components/Resources';
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="experience" element={<ExperiencesPage />} />
-          <Route path="services" element={<ServicesPage />} />
-          <Route path="tools" element={<ToolsPage />} />
-          <Route path="contact" element={<ContactPage/>}/>
-        </Route>
-      </Routes>
-    </Router>
+    <div className="min-h-screen bg-gray-950 px-4 py-8">
+      <div className="mx-auto max-w-7xl space-y-8">
+        <Bio />
+        <div className="grid gap-8 lg:grid-cols-2">
+          <BlockExplorer />
+          <PricesDashboard />
+        </div>
+        <Resources />
+      </div>
+    </div>
   );
-};
+}
 
 export default App;
